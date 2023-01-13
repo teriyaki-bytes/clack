@@ -8,13 +8,13 @@ import { Keypress } from "./src/keypress.ts";
  * Asychronous iterator for keypresses on stdin.
  * @param bufferLength The optional size to allocate for stdin reads.
  * @example
- * for await (const keypress of keydownEventListener()) {
+ * for await (const keypress of keydownEvents()) {
     console.log(keypress);
 
     if (keypress.ctrl && keypress.key === 'c') {
       Deno.exit(0);
     }
-  }
+}
  */
 export async function* keydownEvents(bufferLength = 1024): AsyncIterableIterator<Keypress> {
     while (true) {
