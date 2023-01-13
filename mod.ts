@@ -16,7 +16,7 @@ import { Keypress } from "./src/keypress.ts";
     }
   }
  */
-export async function* keydownEventListener(bufferLength = 1024): AsyncIterableIterator<Keypress> {
+export async function* keydownEvents(bufferLength = 1024): AsyncIterableIterator<Keypress> {
     while (true) {
         const buffer = new Uint8Array(bufferLength);
         Deno.stdin.setRaw(true)
