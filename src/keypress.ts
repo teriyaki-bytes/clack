@@ -1,0 +1,17 @@
+export interface Keypress {
+    key?: string,
+    code?: string,
+    keyCode?: number,
+    sequence: string,
+    unicode: string,
+    ctrl: boolean,
+    metaKey: boolean,
+    shift: boolean,
+    backspace: boolean,
+    upArrow: boolean,
+    downArrow: boolean,
+    leftArrow: boolean,
+    rightArrow: boolean,
+    escape: boolean,
+    space: boolean,
+}
